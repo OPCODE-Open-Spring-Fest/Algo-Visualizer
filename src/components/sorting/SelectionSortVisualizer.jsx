@@ -8,6 +8,9 @@ const COLORS = {
 };
 
 export default function SelectionSortVisualizer({ array, highlight }) {
+  const maxValue = Math.max(...array, 1); // Avoid division by zero
+  const containerHeight = 288; // px (matches h-72)
+
   return (
     <div className="flex items-end justify-center space-x-2 h-72 mt-10 transition-all duration-500">
       {array.map((value, idx) => {
@@ -19,7 +22,8 @@ export default function SelectionSortVisualizer({ array, highlight }) {
         if (highlight?.type === "swap" && highlight.indices?.includes(idx))
           color = COLORS.swap;
 
-        const height = Math.max(value * 5, 15); // Ensures visibility for small numbers
+        // Normalize height relative to the maximum value
+        const height = Math.max((value / maxValue) * containerHeight, 15); // minimum 15px for visibility
 
         return (
           <div
