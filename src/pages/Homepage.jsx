@@ -12,6 +12,7 @@ const sections = [
     phase: "Phase 1 (MVP)",
     img: "https://tamimehsan.github.io/AlgorithmVisualizer/images/sort.png?height=200&width=300",
      link: "/sorting",
+     flag: false
   },
   {
     title: "Searching Algorithms",
@@ -19,7 +20,8 @@ const sections = [
       "Understand linear and binary search methods through live visualization.",
     phase: "Phase 1 (MVP)",
     img: "",
-    link: "/searching"
+    link: "/searching",
+    flag: true
   },
   {
     title: "Pathfinding Algorithms",
@@ -27,7 +29,8 @@ const sections = [
       "Watch how A*, Dijkstra and BFS explore grids to find the optimal path.",
     phase: "Phase 1 (MVP)",
     img: "",
-    link: "/pathfinding"
+    link: "/pathfinding",
+    flag: true
   },
   {
     title: "Graph Algorithms",
@@ -35,7 +38,8 @@ const sections = [
       "Explore BFS, DFS, Kruskal’s, Prim’s, and more — all brought to life interactively.",
     phase: "Phase 2",
     img: "",
-    link: "/graphs"
+    link: "/graphs",
+    flag: true
   },
   {
     title: "Recursion & Backtracking",
@@ -43,7 +47,8 @@ const sections = [
       "Visualize recursive calls and backtracking patterns like N-Queens or Sudoku.",
     phase: "Phase 2",
     img: "",
-    link: "/recursion"
+    link: "/recursion",
+    flag: true
   },
   {
     title: "Data Structures Visualization",
@@ -51,7 +56,8 @@ const sections = [
       "Interactively understand stacks, queues, linked lists, trees, and heaps.",
     phase: "Phase 2",
     img: "",
-    link: "/data-structures"
+    link: "/data-structures",
+    flag: true
   },
   {
     title: "Dynamic Programming",
@@ -59,7 +65,8 @@ const sections = [
       "Step through state transitions and table updates to grasp DP intuitively.",
     phase: "Phase 3",
     img: "",
-    link: "/dynamic-programming"
+    link: "/dynamic-programming",
+    flag: true
   },
 ];
 
@@ -131,9 +138,11 @@ const Homepage = () => {
             </div>
 
             {/* SaaS-style “Coming Soon” Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold bg-gradient-to-br from-indigo-700/70 to-purple-900/70 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              Coming Soon 🚀
-            </div>
+        {section.flag && (
+  <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold bg-gradient-to-br from-indigo-700/70 to-purple-900/70 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    Coming Soon 🚀
+  </div>
+)}
           </div>
         ))}
       </section>
