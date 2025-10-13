@@ -1,6 +1,8 @@
 import React from "react";
 import { ArrowRight, Github } from "lucide-react";
 import sort from "../assets/sorting.png"
+import { useNavigate } from "react-router-dom";
+
 
 const sections = [
   {
@@ -8,7 +10,8 @@ const sections = [
     description:
       "Visualize step-by-step how sorting algorithms organize data efficiently.",
     phase: "Phase 1 (MVP)",
-    img: {sort},
+    img: "https://tamimehsan.github.io/AlgorithmVisualizer/images/sort.png?height=200&width=300",
+     link: "/sorting",
   },
   {
     title: "Searching Algorithms",
@@ -16,6 +19,7 @@ const sections = [
       "Understand linear and binary search methods through live visualization.",
     phase: "Phase 1 (MVP)",
     img: "",
+    link: "/searching"
   },
   {
     title: "Pathfinding Algorithms",
@@ -23,6 +27,7 @@ const sections = [
       "Watch how A*, Dijkstra and BFS explore grids to find the optimal path.",
     phase: "Phase 1 (MVP)",
     img: "",
+    link: "/pathfinding"
   },
   {
     title: "Graph Algorithms",
@@ -30,6 +35,7 @@ const sections = [
       "Explore BFS, DFS, Kruskal’s, Prim’s, and more — all brought to life interactively.",
     phase: "Phase 2",
     img: "",
+    link: "/graphs"
   },
   {
     title: "Recursion & Backtracking",
@@ -37,6 +43,7 @@ const sections = [
       "Visualize recursive calls and backtracking patterns like N-Queens or Sudoku.",
     phase: "Phase 2",
     img: "",
+    link: "/recursion"
   },
   {
     title: "Data Structures Visualization",
@@ -44,6 +51,7 @@ const sections = [
       "Interactively understand stacks, queues, linked lists, trees, and heaps.",
     phase: "Phase 2",
     img: "",
+    link: "/data-structures"
   },
   {
     title: "Dynamic Programming",
@@ -51,11 +59,14 @@ const sections = [
       "Step through state transitions and table updates to grasp DP intuitively.",
     phase: "Phase 3",
     img: "",
+    link: "/dynamic-programming"
   },
 ];
 
 
 const Homepage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen w-full text-white flex flex-col items-center overflow-x-hidden relative">
       {/* Full-Page Animated Gradient Background */}
@@ -93,6 +104,7 @@ const Homepage = () => {
         {sections.map((section, index) => (
           <div
             key={index}
+            onClick={() => section.link && navigate(section.link)}
             className="relative group bg-white/10 border border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-indigo-500/40 transition-all duration-300 backdrop-blur-md hover:-translate-y-2"
           >
             {/* Image */}
