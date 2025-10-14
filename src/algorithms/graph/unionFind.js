@@ -1,6 +1,6 @@
 // src/algorithms/graph/unionFind.js
 
-export class UnionFind {
+class UnionFind {
   constructor(n) {
     this.parent = Array.from({ length: n }, (_, i) => i);
     this.rank = Array(n).fill(0);
@@ -68,3 +68,5 @@ export class UnionFind {
     return this.steps;
   }
 }
+
+export default UnionFind;
