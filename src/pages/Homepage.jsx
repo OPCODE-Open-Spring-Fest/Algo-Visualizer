@@ -36,14 +36,8 @@ const sections = [
     description:
       "Explore BFS, DFS, Kruskal’s, Prim’s, and now Union-Find — all brought to life interactively.",
     phase: "Phase 2",
-<<<<<<< HEAD
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6OVkS24HaByB5Ha5Og7YYUYu7ZmfM-wfWQw&sz=300x200",
-    route: "/graph/union-find", // ✅ Route to Union-Find page
-    link: "/graphs",
-=======
     img: "/graph.png",
     link: "/graph",
->>>>>>> e696d2707d2a34ddaaf15224dae0540757df9841
     flag: false
   },
   {
