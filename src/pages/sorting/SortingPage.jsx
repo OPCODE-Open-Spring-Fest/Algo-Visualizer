@@ -1,6 +1,7 @@
 // src/pages/SortingPage.jsx
 import React, { useState } from "react";
 import SelectionSort from "./SelectionSort";
+import BubbleSort from "./BubbleSort";
 import InsertionSort from "./InsertionSort";
 
 export default function SortingPage() {
@@ -13,7 +14,8 @@ export default function SortingPage() {
         case "insertion":
           return <InsertionSort />;
       // You can add more later like:
-      // case "bubble": return <BubbleSort />;
+      case "bubble":
+        return <BubbleSort />;
       // case "merge": return <MergeSort />;
       default:
         return (
@@ -40,6 +42,7 @@ export default function SortingPage() {
         >
           <option value="">Select Algorithm</option>
           <option value="selection">Selection Sort</option>
+          <option value="bubble">Bubble Sort</option>
           <option value="insertion">Insertion Sort</option>
         </select>
 
