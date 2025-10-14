@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Network, Compass, Rocket } from "lucide-react";
 import BellmanFord from "./BellmanFord";
+import UnionFindPage from "./UnionFind";
 // import Dijkstra from "./Dijkstra";
 // import Kruskal from "./Kruskal";
 
@@ -13,6 +14,12 @@ export default function GraphPage() {
         return (
           <div className="w-full h-full overflow-auto p-">
             <BellmanFord />
+          </div>
+        );
+      case "union-find":
+        return (
+          <div className="w-full h-full overflow-auto p-">
+            <UnionFindPage />
           </div>
         );
       // case "dijkstra":
@@ -61,7 +68,7 @@ export default function GraphPage() {
         >
           <option value="">Select Algorithm</option>
           <option value="bellman-ford">Bellman–Ford</option>
-          {/* <option value="dijkstra">Dijkstra</option> */}
+          <option value="union-find">Union Find</option>
           {/* <option value="kruskal">Kruskal</option> */}
         </select>
 

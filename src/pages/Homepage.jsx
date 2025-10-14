@@ -3,7 +3,6 @@ import { ArrowRight, Github } from "lucide-react";
 import sort from "../assets/sorting.png"
 import { useNavigate } from "react-router-dom";
 
-
 const sections = [
   {
     title: "Sorting Algorithms",
@@ -11,8 +10,8 @@ const sections = [
       "Visualize step-by-step how sorting algorithms organize data efficiently.",
     phase: "Phase 1 (MVP)",
     img: "https://tamimehsan.github.io/AlgorithmVisualizer/images/sort.png?height=200&width=300",
-     link: "/sorting",
-     flag: false
+    link: "/sorting",
+    flag: false
   },
   {
     title: "Searching Algorithms",
@@ -35,7 +34,7 @@ const sections = [
   {
     title: "Graph Algorithms",
     description:
-      "Explore BFS, DFS, Kruskal’s, Prim’s, and more — all brought to life interactively.",
+      "Explore BFS, DFS, Kruskal’s, Prim’s, and now Union-Find — all brought to life interactively.",
     phase: "Phase 2",
     img: "",
     link: "/graph",
@@ -47,6 +46,7 @@ const sections = [
       "Visualize recursive calls and backtracking patterns like N-Queens or Sudoku.",
     phase: "Phase 2",
     img: "",
+    route: "",
     link: "/recursion",
     flag: true
   },
@@ -56,6 +56,7 @@ const sections = [
       "Interactively understand stacks, queues, linked lists, trees, and heaps.",
     phase: "Phase 2",
     img: "",
+    route: "",
     link: "/data-structures",
     flag: true
   },
@@ -65,18 +66,18 @@ const sections = [
       "Step through state transitions and table updates to grasp DP intuitively.",
     phase: "Phase 3",
     img: "",
+    route: "",
     link: "/dynamic-programming",
     flag: true
   },
 ];
-
 
 const Homepage = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen w-full text-white flex flex-col items-center overflow-x-hidden relative">
-      {/* Full-Page Animated Gradient Background */}
+      {/* Background */}
       <div className="fixed inset-0 bg-gradient-to-br from-[#1b0b3a] via-[#120a2a] to-black animate-gradient-x bg-[length:400%_400%] -z-20" />
       <div className="fixed inset-0 bg-black/30 backdrop-blur-sm -z-10" />
 
@@ -92,7 +93,10 @@ const Homepage = () => {
         </p>
 
         <div className="mt-8 flex flex-wrap gap-4 justify-center">
-          <button className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-indigo-500/50 transition-all duration-300">
+          <button
+            onClick={() => window.scrollTo({ top: 600, behavior: "smooth" })}
+            className="px-6 py-3 bg-indigo-500 hover:bg-indigo-600 text-white font-semibold rounded-full flex items-center gap-2 shadow-lg hover:shadow-indigo-500/50 transition-all duration-300"
+          >
             Explore Now <ArrowRight size={18} />
           </button>
           <a
@@ -132,17 +136,24 @@ const Homepage = () => {
               </p>
 
               {/* Explore Button */}
-              <button className="mt-4 text-indigo-400 font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+              <button
+                onClick={() =>
+                  section.route
+                    ? navigate(section.route)
+                    : alert("Coming soon 🚀")
+                }
+                className="mt-4 text-indigo-400 font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+              >
                 Explore <ArrowRight size={16} />
               </button>
             </div>
 
             {/* SaaS-style “Coming Soon” Overlay */}
-        {section.flag && (
-  <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold bg-gradient-to-br from-indigo-700/70 to-purple-900/70 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-    Coming Soon 🚀
-  </div>
-)}
+            {section.flag && (
+              <div className="absolute inset-0 flex items-center justify-center text-white text-lg font-semibold bg-gradient-to-br from-indigo-700/70 to-purple-900/70 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                Coming Soon 🚀
+              </div>
+            )}
           </div>
         ))}
       </section>
