@@ -36,10 +36,10 @@ const sections = [
     description:
       "Explore BFS, DFS, Kruskal’s, Prim’s, and now Union-Find — all brought to life interactively.",
     phase: "Phase 2",
-    img: "",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6OVkS24HaByB5Ha5Og7YYUYu7ZmfM-wfWQw&sz=300x200",
     route: "/graph/union-find", // ✅ Route to Union-Find page
     link: "/graphs",
-    flag: true
+    flag: false
   },
   {
     title: "Recursion & Backtracking",
