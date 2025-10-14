@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Toaster, toast } from "react-hot-toast";
-import BellmanFordVisualizer from "../../components/graph/BellmanFordVisualizer";
-import GraphVisualizer from "../../components/graph/GraphVisualizer";
+import BellmanFordGraph from "../../components/graph/BellmanFordGraph";
 
 // Bellman-Ford generator function
 function* bellmanFord(nodes, edges, source) {
@@ -237,13 +236,7 @@ export default function BellmanFord() {
                 </div>
             )}
 
-            {/* <BellmanFordVisualizer
-                nodes={nodes}
-                edges={edges}
-                distances={distances}
-                highlight={highlight}
-            /> */}
-            <GraphVisualizer
+            <BellmanFordGraph
                 nodes={nodes}
                 edges={edges}
                 distances={distances}

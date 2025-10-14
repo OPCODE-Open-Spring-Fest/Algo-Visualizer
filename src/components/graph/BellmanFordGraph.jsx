@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from "react";
 
-export default function GraphVisualizer({ nodes = [], edges = [], distances = {}, highlight = {} }) {
+export default function BellmanFordGraph({ nodes = [], edges = [], distances = {}, highlight = {} }) {
   const [positions, setPositions] = useState({});
 
   // Arrange nodes in a circle when nodes change
