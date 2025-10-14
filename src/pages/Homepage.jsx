@@ -38,8 +38,8 @@ const sections = [
       "Explore BFS, DFS, Kruskal’s, Prim’s, and more — all brought to life interactively.",
     phase: "Phase 2",
     img: "",
-    link: "/graphs",
-    flag: true
+    link: "/graph",
+    flag: false
   },
   {
     title: "Recursion & Backtracking",
