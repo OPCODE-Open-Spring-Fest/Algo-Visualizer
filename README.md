@@ -52,8 +52,6 @@ Visualize how algorithms explore and find paths across a grid.
 - Depth First Search (DFS)  
 - Dijkstra’s Algorithm  
 - A* Search  
-- Greedy Best-First Search  
-- Bellman-Ford  
 
 **Interactive Options:**
 - Set start and end points  
