@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SelectionSort from "./SelectionSort";
 import BubbleSort from "./BubbleSort";
 import InsertionSort from "./InsertionSort";
+import QuickSort from "./QuickSort";
 
 export default function SortingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -16,6 +17,8 @@ export default function SortingPage() {
       // You can add more later like:
       case "bubble":
         return <BubbleSort />;
+      case "quick":
+        return <QuickSort />;
       // case "merge": return <MergeSort />;
       default:
         return (
@@ -44,6 +47,7 @@ export default function SortingPage() {
           <option value="selection">Selection Sort</option>
           <option value="bubble">Bubble Sort</option>
           <option value="insertion">Insertion Sort</option>
+          <option value="quick">Quick Sort</option>
         </select>
 
         <button

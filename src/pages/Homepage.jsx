@@ -96,7 +96,7 @@ const Homepage = () => {
             Explore Now <ArrowRight size={18} />
           </button>
           <a
-            href="https://github.com/"
+            href="https://github.com/OPCODE-Open-Spring-Fest/Algo-Visualizer"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 border border-gray-400 hover:bg-white/10 text-gray-200 font-semibold rounded-full flex items-center gap-2 transition-all duration-300"
