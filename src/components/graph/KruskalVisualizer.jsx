@@ -165,6 +165,21 @@ export default function KruskalVisualizer() {
 
   return (
     <div className="w-full">
+          {/* 🧭 Manual / Instructions */}
+      <div className="max-w-4xl mx-auto mb-6 p-4 bg-gray-900 border border-gray-700 rounded-lg shadow-md text-sm text-gray-300">
+        <h3 className="text-indigo-400 font-bold mb-2 text-center">
+           How to Use the Kruskal Visualizer
+        </h3>
+        <ul className="list-disc pl-6 space-y-1">
+          <li> <b>Double-click</b> on the canvas to create a node.</li>
+          <li> <b>Click one node</b> and then another to create an edge.</li>
+          <li> You’ll be prompted to enter the <b>edge weight</b>.</li>
+          <li> Once your graph is ready, click <b>Start Visualization</b>.</li>
+          <li> The algorithm will highlight edges being considered, added, or skipped.</li>
+          <li> The <b>DSU panel</b> on the left updates in real time to show connected components.</li>
+          <li> Click <b>Reset</b> to clear and start again.</li>
+        </ul>
+      </div>
       {/* Controls */}
       <div className="flex gap-4 mb-6 justify-center">
         <button
@@ -187,13 +202,20 @@ export default function KruskalVisualizer() {
         </button>
       </div>
 
-      <div className="text-sm text-center text-indigo-300 mb-6">
-        <p>Status: <span className="font-medium text-indigo-400">{status}</span></p>
-        <p>Step: <span className="font-medium text-indigo-400">{stepIndex}</span></p>
+      {/* Status + Step */}
+      <div className="text-sm text-center text-indigo-300 mb-4">
+        <p>
+          Status: <span className="font-medium text-indigo-400">{status}</span>
+        </p>
+        <p>
+          Step: <span className="font-medium text-indigo-400">{stepIndex}</span>
+        </p>
       </div>
 
+    
+
       {/* Layout: DSU Panel + Graph */}
-      <div className="flex w-full max-w-6xl">
+      <div className="flex w-full max-w-6xl mx-auto">
         {/* Left DSU Panel */}
         <div className="w-1/4 bg-gray-900 border border-gray-700 rounded-lg p-3 mr-6 shadow-lg">
           <h2 className="text-lg font-bold mb-3 text-center text-indigo-400">
