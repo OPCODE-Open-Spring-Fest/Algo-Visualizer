@@ -4,6 +4,7 @@ import SelectionSort from "./SelectionSort";
 import BubbleSort from "./BubbleSort";
 import InsertionSort from "./InsertionSort";
 import QuickSort from "./QuickSort";
+import MergeSort from "./MergeSort";
 
 export default function SortingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -20,6 +21,8 @@ export default function SortingPage() {
       case "quick":
         return <QuickSort />;
       // case "merge": return <MergeSort />;
+      case "merge":
+        return <MergeSort />;
       default:
         return (
           <div className="text-gray-400 text-lg mt-20 text-center">
@@ -48,6 +51,7 @@ export default function SortingPage() {
           <option value="bubble">Bubble Sort</option>
           <option value="insertion">Insertion Sort</option>
           <option value="quick">Quick Sort</option>
+          <option value="merge">Merge Sort</option>
         </select>
 
         <button
