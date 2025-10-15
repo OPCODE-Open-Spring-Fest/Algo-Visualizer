@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { Network, Compass, Rocket } from "lucide-react";
 import BellmanFord from "./BellmanFord";
 import UnionFindPage from "./UnionFind";
-// import Dijkstra from "./Dijkstra";
-// import Kruskal from "./Kruskal";
+import Kruskal from "./Kruskal"; 
 
 export default function GraphPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -22,10 +21,14 @@ export default function GraphPage() {
             <UnionFindPage />
           </div>
         );
+      case "kruskal": 
+        return (
+          <div className="w-full h-full overflow-auto p-">
+            <Kruskal />
+          </div>
+        );
       // case "dijkstra":
       //   return <Dijkstra />;
-      // case "kruskal":
-      //   return <Kruskal />;
       default:
         return (
           <div className="flex flex-col items-center justify-center text-center p-6">
@@ -69,7 +72,7 @@ export default function GraphPage() {
           <option value="">Select Algorithm</option>
           <option value="bellman-ford">Bellman–Ford</option>
           <option value="union-find">Union Find</option>
-          {/* <option value="kruskal">Kruskal</option> */}
+          <option value="kruskal">Kruskal</option> {/* ✅ New dropdown option */}
         </select>
 
         <button
