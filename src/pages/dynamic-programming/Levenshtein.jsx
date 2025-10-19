@@ -1,9 +1,6 @@
-import React from 'react'
+import React from "react";
+import LevenshteinVisualizer from "../../components/dynamic-programming/LevenshteinVisualizer";
 
-function Levenshtein() {
-  return (
-    <div className='bg-red-500'>hello there this is the levenshtein page</div>
-  )
+export default function Levenshtein() {
+  return <LevenshteinVisualizer />;
 }
-
-export default Levenshtein
