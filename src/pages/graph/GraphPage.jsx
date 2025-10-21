@@ -3,6 +3,7 @@ import { Network, Compass, Rocket } from "lucide-react";
 import BellmanFord from "./BellmanFord";
 import UnionFindPage from "./UnionFind";
 import Kruskal from "./Kruskal"; 
+import FloydWarshall from "./FloydWarshall";
 
 export default function GraphPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -25,6 +26,12 @@ export default function GraphPage() {
         return (
           <div className="w-full h-full overflow-auto p-">
             <Kruskal />
+          </div>
+        );
+      case "floyd-warshall":
+        return (
+          <div className="w-full h-full overflow-auto p-">
+            <FloydWarshall />
           </div>
         );
       // case "dijkstra":
@@ -73,6 +80,7 @@ export default function GraphPage() {
           <option value="bellman-ford">Bellman–Ford</option>
           <option value="union-find">Union Find</option>
           <option value="kruskal">Kruskal</option> {/* ✅ New dropdown option */}
+          <option value="floyd-warshall">Floyd-Warshall</option>
         </select>
 
         <button

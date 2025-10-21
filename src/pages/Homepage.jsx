@@ -65,10 +65,10 @@ const sections = [
     description:
       "Step through state transitions and table updates to grasp DP intuitively.",
     phase: "Phase 3",
-    img: "",
-    route: "",
+    img: "https://miro.medium.com/v2/1*3NIwCTE7Nudy_wV-zF_nWQ.jpeg",
+    route: "/dynamic-programming",
     link: "/dynamic-programming",
-    flag: true
+    flag: false,
   },
 ];
 
