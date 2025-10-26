@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Brain, Layers, Code, Menu, X } from "lucide-react";
 import Levenshtein from "./Levenshtein";
+import MatrixChainMultiplication from "./MatrixChainMultiplication";
 
 export default function DynamicProgrammingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -12,6 +13,12 @@ export default function DynamicProgrammingPage() {
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <Levenshtein />
+          </div>
+        );
+      case "MatrixChainMultiplication":
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <MatrixChainMultiplication />
           </div>
         );
       default:
@@ -74,6 +81,7 @@ export default function DynamicProgrammingPage() {
         >
           <option value="">Select Algorithm</option>
           <option value="Levenshtein">Levenshtein Distance</option>
+          <option value="MatrixChainMultiplication">Matrix Chain Multiplication</option>
         </select>
 
         <button
