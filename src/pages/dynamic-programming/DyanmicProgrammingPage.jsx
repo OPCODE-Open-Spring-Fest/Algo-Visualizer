@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Grid, Brain, Layers, Code, Menu, X } from "lucide-react";
 import Levenshtein from "./Levenshtein";
 import MatrixChainMultiplication from "./MatrixChainMultiplication";
+import FibonacciSequence from "./FibonacciSequence";
 
 export default function DynamicProgrammingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -19,6 +20,12 @@ export default function DynamicProgrammingPage() {
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <MatrixChainMultiplication />
+          </div>
+        );
+      case "Fibonacci":
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <FibonacciSequence />
           </div>
         );
       default:
@@ -56,9 +63,8 @@ export default function DynamicProgrammingPage() {
     <div className="flex h-screen bg-black text-white relative">
       {/* Sidebar */}
       <div
-        className={`${
-          sidebarOpen ? "translate-x-0" : "hidden"
-        } fixed md:static md:translate-x-0 transition-transform duration-300 w-64 bg-[#0f172a] min-h-screen p-6 border-r border-gray-800 flex-shrink-0 z-20`}
+        className={`${sidebarOpen ? "translate-x-0" : "hidden"
+          } fixed md:static md:translate-x-0 transition-transform duration-300 w-64 bg-[#0f172a] min-h-screen p-6 border-r border-gray-800 flex-shrink-0 z-20`}
       >
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-bold text-indigo-400 tracking-wide">
@@ -82,6 +88,7 @@ export default function DynamicProgrammingPage() {
           <option value="">Select Algorithm</option>
           <option value="Levenshtein">Levenshtein Distance</option>
           <option value="MatrixChainMultiplication">Matrix Chain Multiplication</option>
+          <option value="Fibonacci">Fibonacci Sequence</option>
         </select>
 
         <button
