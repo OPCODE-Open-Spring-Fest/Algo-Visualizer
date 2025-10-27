@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Network, Compass, Rocket } from "lucide-react";
 import BellmanFord from "./BellmanFord";
 import UnionFindPage from "./UnionFind";
-import Kruskal from "./Kruskal"; 
+import Kruskal from "./Kruskal";
 import FloydWarshall from "./FloydWarshall";
+import CycleDetection from "./CycleDetection"; 
 
 export default function GraphPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -22,7 +23,7 @@ export default function GraphPage() {
             <UnionFindPage />
           </div>
         );
-      case "kruskal": 
+      case "kruskal":
         return (
           <div className="w-full h-full overflow-auto p-">
             <Kruskal />
@@ -34,8 +35,12 @@ export default function GraphPage() {
             <FloydWarshall />
           </div>
         );
-      // case "dijkstra":
-      //   return <Dijkstra />;
+      case "cycle-detection": // ✅ Added
+        return (
+          <div className="w-full h-full overflow-auto p-">
+            <CycleDetection />
+          </div>
+        );
       default:
         return (
           <div className="flex flex-col items-center justify-center text-center p-6">
@@ -48,8 +53,9 @@ export default function GraphPage() {
                   Graph Algorithm Visualizer
                 </h2>
                 <p className="text-gray-400 mb-6 max-w-sm">
-                  Select a graph algorithm from the sidebar to begin visualization.
-                  Watch how edges, nodes, and distances transform step by step! 🧠✨
+                  Select a graph algorithm from the sidebar to begin
+                  visualization. Watch how edges, nodes, and distances transform
+                  step by step! 🧠✨
                 </p>
                 <div className="flex items-center justify-center gap-6">
                   <Compass className="w-8 h-8 text-blue-400 animate-pulse" />
@@ -79,8 +85,9 @@ export default function GraphPage() {
           <option value="">Select Algorithm</option>
           <option value="bellman-ford">Bellman–Ford</option>
           <option value="union-find">Union Find</option>
-          <option value="kruskal">Kruskal</option> {/* ✅ New dropdown option */}
-          <option value="floyd-warshall">Floyd-Warshall</option>
+          <option value="kruskal">Kruskal</option>
+          <option value="floyd-warshall">Floyd–Warshall</option>
+          <option value="cycle-detection">Cycle Detection</option> {/* ✅ Added */}
         </select>
 
         <button
