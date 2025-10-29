@@ -5,6 +5,7 @@ import UnionFindPage from "./UnionFind";
 import Kruskal from "./Kruskal";
 import FloydWarshall from "./FloydWarshall";
 import CycleDetection from "./CycleDetection"; 
+import DFSTraversal from "./DFSTraversal";
 
 export default function GraphPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -39,6 +40,12 @@ export default function GraphPage() {
         return (
           <div className="w-full h-full overflow-auto p-">
             <CycleDetection />
+          </div>
+        );
+      case "dfs-traversal":
+        return (
+          <div className="w-full h-full overflow-auto p-">
+            <DFSTraversal />
           </div>
         );
       default:
@@ -88,6 +95,7 @@ export default function GraphPage() {
           <option value="kruskal">Kruskal</option>
           <option value="floyd-warshall">Floyd–Warshall</option>
           <option value="cycle-detection">Cycle Detection</option> {/* ✅ Added */}
+          <option value="dfs-traversal">DFS Traversal</option>
         </select>
 
         <button
