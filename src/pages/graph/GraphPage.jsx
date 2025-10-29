@@ -4,8 +4,9 @@ import BellmanFord from "./BellmanFord";
 import UnionFindPage from "./UnionFind";
 import Kruskal from "./Kruskal";
 import FloydWarshall from "./FloydWarshall";
-import CycleDetection from "./CycleDetection"; 
+import CycleDetection from "./CycleDetection";
 import DFSTraversal from "./DFSTraversal";
+import BFS from "./BFS";
 
 export default function GraphPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -46,6 +47,12 @@ export default function GraphPage() {
         return (
           <div className="w-full h-full overflow-auto p-">
             <DFSTraversal />
+          </div>
+        );
+      case "bfs":
+        return (
+          <div className="w-full h-full overflow-auto p-">
+            <BFS />
           </div>
         );
       default:
@@ -91,11 +98,13 @@ export default function GraphPage() {
         >
           <option value="">Select Algorithm</option>
           <option value="bellman-ford">Bellman–Ford</option>
+          <option value="bfs">BFS Traversal</option>
           <option value="union-find">Union Find</option>
           <option value="kruskal">Kruskal</option>
           <option value="floyd-warshall">Floyd–Warshall</option>
-          <option value="cycle-detection">Cycle Detection</option> {/* ✅ Added */}
+          <option value="cycle-detection">Cycle Detection</option>
           <option value="dfs-traversal">DFS Traversal</option>
+          <option value="bfs">BFS Traversal</option>
         </select>
 
         <button
