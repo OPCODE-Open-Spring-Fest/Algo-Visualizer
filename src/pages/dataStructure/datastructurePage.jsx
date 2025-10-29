@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Network, Compass, Rocket } from "lucide-react";
 import StackPage from "./stack.jsx";
+import LinkedListPage from "./linkedlist.jsx"; // ✅ Linked List page import
 
 export default function DSPage() {
   const [selectedDS, setSelectedDS] = useState("");
@@ -11,6 +12,13 @@ export default function DSPage() {
         return (
           <div className="w-full h-full overflow-auto">
             <StackPage />
+          </div>
+        );
+
+      case "linkedlist":
+        return (
+          <div className="w-full h-full overflow-auto">
+            <LinkedListPage />
           </div>
         );
 
@@ -27,7 +35,7 @@ export default function DSPage() {
                 </h2>
                 <p className="text-gray-400 mb-6 max-w-sm">
                   Select a data structure from the sidebar to begin visualization.
-                  Watch how elements, stacks, and queues transform step by step! 🧠✨
+                  Watch how stacks, queues, and linked lists transform step by step! 🧠✨
                 </p>
                 <div className="flex items-center justify-center gap-6">
                   <Compass className="w-8 h-8 text-blue-400 animate-pulse" />
@@ -57,7 +65,7 @@ export default function DSPage() {
           <option value="">Select Data Structure</option>
           <option value="stack">Stack</option>
           <option value="queue">Queue</option>
-          {/* <option value="linkedlist">Linked List</option> */}
+          <option value="linkedlist">Linked List</option>
         </select>
 
         <button
