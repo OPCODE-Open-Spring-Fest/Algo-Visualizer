@@ -4,6 +4,7 @@ import Levenshtein from "./Levenshtein";
 import MatrixChainMultiplication from "./MatrixChainMultiplication";
 import FibonacciSequence from "./FibonacciSequence";
 import Knapsack from "./Knapsack";
+import PascalTriangle from "./PascalTriangle"; 
 
 export default function DynamicProgrammingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -29,10 +30,16 @@ export default function DynamicProgrammingPage() {
             <FibonacciSequence />
           </div>
         );
-        case "Knapsack":
+      case "Knapsack":
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
-            <Knapsack/>
+            <Knapsack />
+          </div>
+        );
+      case "PascalTriangle": 
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <PascalTriangle />
           </div>
         );
       default:
@@ -96,7 +103,8 @@ export default function DynamicProgrammingPage() {
           <option value="Levenshtein">Levenshtein Distance</option>
           <option value="MatrixChainMultiplication">Matrix Chain Multiplication</option>
           <option value="Fibonacci">Fibonacci Sequence</option>
-           <option value="Knapsack">Knapsack</option>
+          <option value="Knapsack">Knapsack</option>
+          <option value="PascalTriangle">Pascal Triangle</option> {/* ✅ added */}
         </select>
 
         <button
