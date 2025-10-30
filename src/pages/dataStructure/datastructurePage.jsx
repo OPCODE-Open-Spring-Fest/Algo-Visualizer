@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Network, Compass, Rocket } from "lucide-react";
 import StackPage from "./stack.jsx";
 import LinkedListPage from "./linkedlist.jsx"; // ✅ Linked List page import
+import QueuePage from "./queue.jsx";
 
 export default function DSPage() {
   const [selectedDS, setSelectedDS] = useState("");
@@ -19,6 +20,13 @@ export default function DSPage() {
         return (
           <div className="w-full h-full overflow-auto">
             <LinkedListPage />
+          </div>
+        );
+
+      case "queue":
+        return (
+          <div className="w-full h-full overflow-auto">
+            <QueuePage />
           </div>
         );
 
