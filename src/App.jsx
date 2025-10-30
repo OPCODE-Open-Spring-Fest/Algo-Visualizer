@@ -6,7 +6,7 @@ import GraphPage from "./pages/graph/GraphPage";
 import Homepage from "./pages/Homepage.jsx";
 import DSPage from "./pages/dataStructure/datastructurePage.jsx"
 import DynamicProgrammingPage from "./pages/dynamic-programming/DyanmicProgrammingPage.jsx";
-
+import Searchingpage from "./pages/searching/searchingPage";
 function App() {
   return (
     <Router>
@@ -14,6 +14,7 @@ function App() {
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/graph/union-find" element={<UnionFindPage />} /> */}
         <Route path="/sorting" element={<SortingPage />} />
+        <Route path="/searching" element={<Searchingpage />} />
         <Route path="/data-structures" element={<DSPage/>}/>
         <Route path="/graph" element={<GraphPage />} />
         <Route path="/dynamic-programming" element={<DynamicProgrammingPage />} />

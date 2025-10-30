@@ -3,6 +3,7 @@ import { ArrowRight, Github } from "lucide-react";
 import sort from "../assets/sorting.png"
 import { useNavigate } from "react-router-dom";
 
+
 const sections = [
   {
     title: "Sorting Algorithms",
@@ -18,9 +19,9 @@ const sections = [
     description:
       "Understand linear and binary search methods through live visualization.",
     phase: "Phase 1 (MVP)",
-    img: "",
+    img: "/searching.png",
     link: "/searching",
-    flag: true
+    flag: false
   },
   {
     title: "Pathfinding Algorithms",
@@ -116,7 +117,7 @@ const Homepage = () => {
           <div
             key={index}
             onClick={() => section.link && navigate(section.link)}
-            className="relative group bg-white/10 border border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-indigo-500/40 transition-all duration-300 backdrop-blur-md hover:-translate-y-2"
+            className="relative group bg-white/10 border border-white/10 rounded-2xl overflow-hidden shadow-2xl hover:shadow-indigo-500/40 cursor-pointer transition-all duration-300 backdrop-blur-md hover:-translate-y-2"
           >
             {/* Image */}
             <img
@@ -138,11 +139,11 @@ const Homepage = () => {
               {/* Explore Button */}
               <button
                 onClick={() =>
-                  section.route
-                    ? navigate(section.route)
+                  section.link
+                    ? navigate(section.link)
                     : alert("Coming soon 🚀")
                 }
-                className="mt-4 text-indigo-400 font-semibold flex items-center gap-1 hover:gap-2 transition-all"
+                className="mt-4 text-indigo-400 font-semibold flex items-center gap-1 hover:gap-2 cursor-pointer transition-all"
               >
                 Explore <ArrowRight size={16} />
               </button>
