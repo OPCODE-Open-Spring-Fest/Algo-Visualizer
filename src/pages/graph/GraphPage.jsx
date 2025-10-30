@@ -7,6 +7,8 @@ import FloydWarshall from "./FloydWarshall";
 import CycleDetection from "./CycleDetection";
 import DFSTraversal from "./DFSTraversal";
 import BFS from "./BFS";
+import KahnTopologicalSort from "./TopoSortKahn";
+import DFSTopologicalSort from "./TopoSortDFS";
 
 export default function GraphPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -14,47 +16,23 @@ export default function GraphPage() {
   const renderAlgorithm = () => {
     switch (selectedAlgo) {
       case "bellman-ford":
-        return (
-          <div className="w-full h-full overflow-auto p-">
-            <BellmanFord />
-          </div>
-        );
+        return <BellmanFord />;
       case "union-find":
-        return (
-          <div className="w-full h-full overflow-auto p-">
-            <UnionFindPage />
-          </div>
-        );
+        return <UnionFindPage />;
       case "kruskal":
-        return (
-          <div className="w-full h-full overflow-auto p-">
-            <Kruskal />
-          </div>
-        );
+        return <Kruskal />;
       case "floyd-warshall":
-        return (
-          <div className="w-full h-full overflow-auto p-">
-            <FloydWarshall />
-          </div>
-        );
-      case "cycle-detection": // ✅ Added
-        return (
-          <div className="w-full h-full overflow-auto p-">
-            <CycleDetection />
-          </div>
-        );
+        return <FloydWarshall />;
+      case "cycle-detection":
+        return <CycleDetection />;
       case "dfs-traversal":
-        return (
-          <div className="w-full h-full overflow-auto p-">
-            <DFSTraversal />
-          </div>
-        );
+        return <DFSTraversal />;
       case "bfs":
-        return (
-          <div className="w-full h-full overflow-auto p-">
-            <BFS />
-          </div>
-        );
+        return <BFS />;
+      case "topo-kahn":
+        return <KahnTopologicalSort />;
+      case "topo-dfs":
+        return <DFSTopologicalSort />;
       default:
         return (
           <div className="flex flex-col items-center justify-center text-center p-6">
@@ -99,12 +77,15 @@ export default function GraphPage() {
           <option value="">Select Algorithm</option>
           <option value="bellman-ford">Bellman–Ford</option>
           <option value="bfs">BFS Traversal</option>
+          <option value="dfs-traversal">DFS Traversal</option>
           <option value="union-find">Union Find</option>
           <option value="kruskal">Kruskal</option>
           <option value="floyd-warshall">Floyd–Warshall</option>
           <option value="cycle-detection">Cycle Detection</option>
-          <option value="dfs-traversal">DFS Traversal</option>
-          <option value="bfs">BFS Traversal</option>
+          <optgroup label="Topological Sort">
+            <option value="topo-kahn">Kahn’s Algorithm</option>
+            <option value="topo-dfs">DFS-based</option>
+          </optgroup>
         </select>
 
         <button
@@ -124,7 +105,7 @@ export default function GraphPage() {
 
       {/* Visualization Area */}
       <div className="flex-1 flex overflow-auto">
-        <div className="flex-1 min-w-[800px] min-h-full">
+        <div className="flex-1 min-w-[800px] min-h-full p-4 overflow-y-auto">
           {renderAlgorithm()}
         </div>
       </div>
