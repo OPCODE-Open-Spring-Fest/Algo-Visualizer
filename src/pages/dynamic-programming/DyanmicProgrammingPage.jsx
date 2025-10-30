@@ -4,6 +4,7 @@ import Levenshtein from "./Levenshtein";
 import MatrixChainMultiplication from "./MatrixChainMultiplication";
 import FibonacciSequence from "./FibonacciSequence";
 import Knapsack from "./Knapsack";
+import PascalTriangle from "./PascalTriangle"; 
 import LCSPage from "./LCS";
 
 export default function DynamicProgrammingPage() {
@@ -30,10 +31,16 @@ export default function DynamicProgrammingPage() {
             <FibonacciSequence />
           </div>
         );
-        case "Knapsack":
+      case "Knapsack":
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
-            <Knapsack/>
+            <Knapsack />
+          </div>
+        );
+      case "PascalTriangle": 
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <PascalTriangle />
           </div>
         );
       case "LongestCommonSubsequence":
@@ -103,6 +110,8 @@ export default function DynamicProgrammingPage() {
           <option value="Levenshtein">Levenshtein Distance</option>
           <option value="MatrixChainMultiplication">Matrix Chain Multiplication</option>
           <option value="Fibonacci">Fibonacci Sequence</option>
+          <option value="Knapsack">Knapsack</option>
+          <option value="PascalTriangle">Pascal Triangle</option> {/* ✅ added */}
            <option value="Knapsack">Knapsack</option>
            <option value="LongestCommonSubsequence">Longest Common Subsequence</option>
         </select>
