@@ -4,6 +4,7 @@ import Levenshtein from "./Levenshtein";
 import MatrixChainMultiplication from "./MatrixChainMultiplication";
 import FibonacciSequence from "./FibonacciSequence";
 import Knapsack from "./Knapsack";
+import LCSPage from "./LCS";
 
 export default function DynamicProgrammingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -33,6 +34,12 @@ export default function DynamicProgrammingPage() {
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <Knapsack/>
+          </div>
+        );
+      case "LongestCommonSubsequence":
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <LCSPage />
           </div>
         );
       default:
@@ -97,6 +104,7 @@ export default function DynamicProgrammingPage() {
           <option value="MatrixChainMultiplication">Matrix Chain Multiplication</option>
           <option value="Fibonacci">Fibonacci Sequence</option>
            <option value="Knapsack">Knapsack</option>
+           <option value="LongestCommonSubsequence">Longest Common Subsequence</option>
         </select>
 
         <button
