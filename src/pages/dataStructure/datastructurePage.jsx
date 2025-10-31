@@ -3,6 +3,8 @@ import { Network, Compass, Rocket } from "lucide-react";
 import StackPage from "./stack.jsx";
 import LinkedListPage from "./linkedlist.jsx"; // ✅ Linked List page import
 import QueuePage from "./queue.jsx";
+import BinaryTreePage from "./BinaryTreePage.jsx";
+
 
 export default function DSPage() {
   const [selectedDS, setSelectedDS] = useState("");
@@ -29,6 +31,13 @@ export default function DSPage() {
             <QueuePage />
           </div>
         );
+        case "binarytree":
+         return (
+    <div className="w-full h-full overflow-auto">
+      <BinaryTreePage />
+    </div>
+  );
+
 
       default:
         return (
@@ -74,6 +83,8 @@ export default function DSPage() {
           <option value="stack">Stack</option>
           <option value="queue">Queue</option>
           <option value="linkedlist">Linked List</option>
+          <option value="binarytree">Binary Tree / BST</option>
+
         </select>
 
         <button
