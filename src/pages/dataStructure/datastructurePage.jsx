@@ -4,7 +4,7 @@ import StackPage from "./stack.jsx";
 import LinkedListPage from "./linkedlist.jsx"; // ✅ Linked List page import
 import QueuePage from "./queue.jsx";
 import BinaryTreePage from "./BinaryTreePage.jsx";
-
+import HeapPage from "./HeapPage.jsx";
 
 export default function DSPage() {
   const [selectedDS, setSelectedDS] = useState("");
@@ -35,6 +35,12 @@ export default function DSPage() {
          return (
     <div className="w-full h-full overflow-auto">
       <BinaryTreePage />
+    </div>
+  );
+  case "heap":
+  return (
+    <div className="w-full h-full overflow-auto">
+      <HeapPage />
     </div>
   );
 
@@ -84,6 +90,7 @@ export default function DSPage() {
           <option value="queue">Queue</option>
           <option value="linkedlist">Linked List</option>
           <option value="binarytree">Binary Tree / BST</option>
+          <option value="heap">Heap</option>
 
         </select>
 
