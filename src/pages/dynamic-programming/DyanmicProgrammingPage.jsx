@@ -4,8 +4,9 @@ import Levenshtein from "./Levenshtein";
 import MatrixChainMultiplication from "./MatrixChainMultiplication";
 import FibonacciSequence from "./FibonacciSequence";
 import Knapsack from "./Knapsack";
-import PascalTriangle from "./PascalTriangle"; 
+import PascalTriangle from "./PascalTriangle";
 import LCSPage from "./LCS";
+import CoinChange from "./CoinChange"; // ✅ Added import
 
 export default function DynamicProgrammingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -37,7 +38,7 @@ export default function DynamicProgrammingPage() {
             <Knapsack />
           </div>
         );
-      case "PascalTriangle": 
+      case "PascalTriangle":
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <PascalTriangle />
@@ -47,6 +48,12 @@ export default function DynamicProgrammingPage() {
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <LCSPage />
+          </div>
+        );
+      case "CoinChange": // ✅ Added new algorithm case
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <CoinChange />
           </div>
         );
       default:
@@ -65,7 +72,7 @@ export default function DynamicProgrammingPage() {
                     Understand how overlapping subproblems and optimal
                     substructures work in real time. Visualize table-filling,
                     recursion trees, and memoization flow with stunning
-                    animations! ⚙️🧩
+                    animations!
                   </p>
                 </div>
                 <div className="flex items-center justify-center gap-6">
@@ -111,9 +118,9 @@ export default function DynamicProgrammingPage() {
           <option value="MatrixChainMultiplication">Matrix Chain Multiplication</option>
           <option value="Fibonacci">Fibonacci Sequence</option>
           <option value="Knapsack">Knapsack</option>
-          <option value="PascalTriangle">Pascal Triangle</option> {/* ✅ added */}
-           <option value="Knapsack">Knapsack</option>
-           <option value="LongestCommonSubsequence">Longest Common Subsequence</option>
+          <option value="PascalTriangle">Pascal Triangle</option>
+          <option value="LongestCommonSubsequence">Longest Common Subsequence</option>
+          <option value="CoinChange">Coin Change</option> {/* ✅ Added */}
         </select>
 
         <button
