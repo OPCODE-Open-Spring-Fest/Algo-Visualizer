@@ -7,6 +7,7 @@ import Homepage from "./pages/Homepage.jsx";
 import DSPage from "./pages/dataStructure/datastructurePage.jsx"
 import DynamicProgrammingPage from "./pages/dynamic-programming/DyanmicProgrammingPage.jsx";
 import Searchingpage from "./pages/searching/searchingPage";
+import RecursionPage from "./pages/Recursion/RecursionPage";
 function App() {
   return (
     <Router>
@@ -18,6 +19,7 @@ function App() {
         <Route path="/data-structures" element={<DSPage/>}/>
         <Route path="/graph" element={<GraphPage />} />
         <Route path="/dynamic-programming" element={<DynamicProgrammingPage />} />
+        <Route path="/recursion" element={<RecursionPage/>}/>
       </Routes>
     </Router>
   );
