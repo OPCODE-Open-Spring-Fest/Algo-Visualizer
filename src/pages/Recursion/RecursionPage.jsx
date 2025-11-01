@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { X, Menu } from "lucide-react";
 import MazeSolver from "./MazeSolver";
-
+import NQueens from "./NQueens";
 export default function RecursionPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -12,6 +12,12 @@ export default function RecursionPage() {
         return (
           <div className="w-full p-4 overflow-auto">
             <MazeSolver />
+          </div>
+        );
+      case "NQueens":
+        return (
+          <div className="w-full p-4 overflow-auto">
+            <NQueens />
           </div>
         );
       default:
@@ -55,6 +61,7 @@ export default function RecursionPage() {
         >
           <option value="">Select Algorithm</option>
           <option value="MazeSolver">Maze Solver</option>
+          <option value="NQueens">NQueens</option>
         </select>
 
         <button
