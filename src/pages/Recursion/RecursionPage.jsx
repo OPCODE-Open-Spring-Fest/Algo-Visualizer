@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { X, Menu } from "lucide-react";
 import MazeSolver from "./MazeSolver";
 import NQueens from "./NQueens";
+import Sudoku from "./sudokuSolver";
 export default function RecursionPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -20,6 +21,13 @@ export default function RecursionPage() {
             <NQueens />
           </div>
         );
+      case "SudokuSolver":
+        return(
+          <div className="w-full p-4 overflow-auto">
+            <Sudoku />
+          </div>
+        );
+
       default:
         return (
           <div className="flex flex-col items-center justify-center text-center p-6 min-h-screen bg-gray-900 text-gray-300">
@@ -62,6 +70,7 @@ export default function RecursionPage() {
           <option value="">Select Algorithm</option>
           <option value="MazeSolver">Maze Solver</option>
           <option value="NQueens">NQueens</option>
+          <option value="SudokuSolver">Sudoku Solver</option>
         </select>
 
         <button
