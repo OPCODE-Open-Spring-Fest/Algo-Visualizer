@@ -4,6 +4,7 @@ import MazeSolver from "./MazeSolver";
 import NQueens from "./NQueens";
 import Sudoku from "./sudokuSolver";
 import TowerOfHanoi from "./towerOfHanoi";
+import SubsetSum from "./SubsetSum";
 export default function RecursionPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -32,6 +33,12 @@ export default function RecursionPage() {
         return (
           <div className="w-full p-4 overflow-auto">
             <TowerOfHanoi />
+          </div>
+        );
+      case "SubsetSum":
+        return (
+          <div className="w-full p-4 overflow-auto">
+            <SubsetSum />
           </div>
         );
 
@@ -79,6 +86,7 @@ export default function RecursionPage() {
           <option value="NQueens">NQueens</option>
           <option value="SudokuSolver">Sudoku Solver</option>
           <option value="TowerofHanoi">Tower of Hanoi</option>
+          <option value="SubsetSum">Subset Sum</option>
         </select>
 
         <button
