@@ -6,7 +6,9 @@ import FibonacciSequence from "./FibonacciSequence";
 import Knapsack from "./Knapsack";
 import PascalTriangle from "./PascalTriangle";
 import LCSPage from "./LCS";
-import CoinChange from "./CoinChange"; // ✅ Added import
+import LISPage from "./LIS";
+import CoinChange from "./CoinChange";
+
 import RodCutting from "./RodCutting";
 
 export default function DynamicProgrammingPage() {
@@ -51,7 +53,13 @@ export default function DynamicProgrammingPage() {
             <LCSPage />
           </div>
         );
-      case "CoinChange": // ✅ Added new algorithm case
+      case "LongestIncreasingSubsequence":
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <LISPage />
+          </div>
+        );
+      case "CoinChange":
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <CoinChange />
@@ -127,7 +135,8 @@ export default function DynamicProgrammingPage() {
           <option value="Knapsack">Knapsack</option>
           <option value="PascalTriangle">Pascal Triangle</option>
           <option value="LongestCommonSubsequence">Longest Common Subsequence</option>
-          <option value="CoinChange">Coin Change</option> {/* ✅ Added */}
+          <option value="LongestIncreasingSubsequence">Longest Increasing Subsequence</option>
+          <option value="CoinChange">Coin Change</option>
           <option value="RodCutting">Rod Cutting</option>
         </select>
 
