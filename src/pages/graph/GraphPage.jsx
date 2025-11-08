@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Network, Compass, Rocket } from "lucide-react";
+
 import BellmanFord from "./BellmanFord";
 import UnionFindPage from "./UnionFind";
 import Kruskal from "./Kruskal";
@@ -9,6 +10,8 @@ import DFSTraversal from "./DFSTraversal";
 import BFS from "./BFS";
 import KahnTopologicalSort from "./TopoSortKahn";
 import DFSTopologicalSort from "./TopoSortDFS";
+
+import Prims from "./Prims";
 
 export default function GraphPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -21,6 +24,8 @@ export default function GraphPage() {
         return <UnionFindPage />;
       case "kruskal":
         return <Kruskal />;
+      case "prim":                     
+        return <Prims />;
       case "floyd-warshall":
         return <FloydWarshall />;
       case "cycle-detection":
@@ -69,6 +74,7 @@ export default function GraphPage() {
         </h2>
 
         <label className="block mb-2 text-sm">Algorithm:</label>
+
         <select
           value={selectedAlgo}
           onChange={(e) => setSelectedAlgo(e.target.value)}
@@ -80,8 +86,13 @@ export default function GraphPage() {
           <option value="dfs-traversal">DFS Traversal</option>
           <option value="union-find">Union Find</option>
           <option value="kruskal">Kruskal</option>
+
+          {/* ✅ NEW OPTION for Prim's MST */}
+          <option value="prim">Prim’s MST</option>
+
           <option value="floyd-warshall">Floyd–Warshall</option>
           <option value="cycle-detection">Cycle Detection</option>
+
           <optgroup label="Topological Sort">
             <option value="topo-kahn">Kahn’s Algorithm</option>
             <option value="topo-dfs">DFS-based</option>
