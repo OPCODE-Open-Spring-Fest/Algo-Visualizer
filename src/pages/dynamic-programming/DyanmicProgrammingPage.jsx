@@ -9,6 +9,7 @@ import LCSPage from "./LCS";
 import LISPage from "./LIS";
 import CoinChange from "./CoinChange";
 
+import RodCutting from "./RodCutting";
 
 export default function DynamicProgrammingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -62,6 +63,12 @@ export default function DynamicProgrammingPage() {
         return (
           <div className="md:w-full w-screen overflow-clip p-2">
             <CoinChange />
+          </div>
+        );
+      case "RodCutting":
+        return (
+          <div className="md:w-full w-screen overflow-clip p-2">
+            <RodCutting />
           </div>
         );
       default:
@@ -130,6 +137,7 @@ export default function DynamicProgrammingPage() {
           <option value="LongestCommonSubsequence">Longest Common Subsequence</option>
           <option value="LongestIncreasingSubsequence">Longest Increasing Subsequence</option>
           <option value="CoinChange">Coin Change</option>
+          <option value="RodCutting">Rod Cutting</option>
         </select>
 
         <button
