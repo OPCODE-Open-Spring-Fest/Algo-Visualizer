@@ -6,6 +6,7 @@ import Sudoku from "./sudokuSolver";
 import TowerOfHanoi from "./towerOfHanoi";
 import SubsetSum from "./SubsetSum";
 import FloodFillPage from "./FloodFill";
+import PermutationsPage from "./permutations";
 export default function RecursionPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(true);
@@ -46,6 +47,12 @@ export default function RecursionPage() {
         return(
           <div className="w-full p-4 overflow-auto">
               <FloodFillPage />
+          </div>
+        )
+        case "Permutations":
+        return(
+          <div className="w-full p-4 overflow-auto">
+              <PermutationsPage />
           </div>
         )
       default:
@@ -94,6 +101,7 @@ export default function RecursionPage() {
           <option value="TowerofHanoi">Tower of Hanoi</option>
           <option value="SubsetSum">Subset Sum</option>
           <option value="FloodFill">Flood Fill</option>
+          <option value="Permutations">Permutations</option>
         </select>
 
         <button
