@@ -24,6 +24,15 @@ const sections = [
     flag: false
   },
   {
+    title: "Sliding Window Algorithms",
+    description:
+      "Visualize how the sliding window technique efficiently processes subarrays and substrings with dynamic window movement.",
+    phase: "Phase 1 (MVP)",
+    img: "https://media.geeksforgeeks.org/wp-content/uploads/20230626162234/Sliding-Window-Technique.png",
+    link: "/sliding-window",
+    flag: false
+  },
+  {
     title: "Pathfinding Algorithms",
     description:
       "Watch how A*, Dijkstra and BFS explore grids to find the optimal path.",
