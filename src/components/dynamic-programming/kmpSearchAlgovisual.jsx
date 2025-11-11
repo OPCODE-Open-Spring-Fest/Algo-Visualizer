@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect, useRef } from "react";
-//import { computeLPSSteps, kmpSearchSteps } from "@/algorithms/string/kmpAlgo";
+import { computeLPSSteps, kmpSearchSteps } from "@/algorithms/dynamic-programming/kmpAlgo";
 
 const LPSDisplay = ({ pattern, lpsState }) => {
   const { lps, highlight, message } = lpsState;

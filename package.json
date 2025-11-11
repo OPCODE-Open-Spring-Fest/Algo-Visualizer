@@ -1,8 +1,20 @@
 {
   "name": "algo-visualizer",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "**AlgoVisualizer** is an open-source platform that allows learners and developers to **visualize algorithms** in real-time — from sorting and searching to graph traversal, recursion, and dynamic programming.  \r Built with **React + Tailwind CSS**, it aims to make algorithmic concepts more intuitive and interactive.",
+  "homepage": "https://github.com/PresenceOP-Coder/Algo-Visualizer#readme",
+  "bugs": {
+    "url": "https://github.com/PresenceOP-Coder/Algo-Visualizer/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PresenceOP-Coder/Algo-Visualizer.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "commitlint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

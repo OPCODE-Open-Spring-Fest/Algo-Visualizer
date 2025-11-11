@@ -1,4 +1,3 @@
-// src/pages/SortingPage.jsx
 import React, { useState } from "react";
 import SelectionSort from "./SelectionSort";
 import BubbleSort from "./BubbleSort";
@@ -6,6 +5,7 @@ import InsertionSort from "./InsertionSort";
 import QuickSort from "./QuickSort";
 import MergeSort from "./MergeSort";
 import RadixSort from "./RadixSort";
+import CountingSort from "./CountingSort";
 
 export default function SortingPage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -16,16 +16,16 @@ export default function SortingPage() {
         return <SelectionSort />;
       case "insertion":
         return <InsertionSort />;
-      // You can add more later like:
       case "bubble":
         return <BubbleSort />;
       case "quick":
         return <QuickSort />;
-      // case "merge": return <MergeSort />;
       case "merge":
         return <MergeSort />;
       case "radix":
         return <RadixSort />
+      case "counting":
+        return <CountingSort />
       default:
         return (
           <div className="text-gray-400 text-lg mt-20 text-center">
@@ -37,7 +37,6 @@ export default function SortingPage() {
 
   return (
     <div className="flex h-screen bg-black text-white">
-      {/* Left Sidebar */}
       <div className="w-64 bg-[#0f172a] p-6">
         <h2 className="text-xl font-bold mb-6 text-indigo-400">
           Sorting Panel
@@ -52,10 +51,11 @@ export default function SortingPage() {
           <option value="">Select Algorithm</option>
           <option value="selection">Selection Sort</option>
           <option value="bubble">Bubble Sort</option>
-          <option value="insertion">Insertion Sort</option>
+          <option valueD="insertion">Insertion Sort</option>
           <option value="quick">Quick Sort</option>
           <option value="merge">Merge Sort</option>
           <option value="radix">Radix Sort</option>
+          <option value="counting">Counting Sort</option>
         </select>
 
         <button
@@ -73,7 +73,7 @@ export default function SortingPage() {
         </a>
       </div>
 
-      {/* Right Visualization Area */}
+      
       <div className="flex-1 flex justify-center items-center">
         {renderAlgorithm()}
       </div>
