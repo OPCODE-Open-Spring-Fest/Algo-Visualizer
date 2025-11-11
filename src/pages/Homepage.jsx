@@ -28,7 +28,7 @@ const sections = [
     description:
       "Visualize how the sliding window technique efficiently processes subarrays and substrings with dynamic window movement.",
     phase: "Phase 1 (MVP)",
-    img: "https://media.geeksforgeeks.org/wp-content/uploads/20230626162234/Sliding-Window-Technique.png",
+    img: "/Sliding-Window.png",
     link: "/sliding-window",
     flag: false
   },
