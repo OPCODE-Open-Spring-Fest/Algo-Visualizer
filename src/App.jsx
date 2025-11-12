@@ -9,6 +9,7 @@ import DynamicProgrammingPage from "./pages/dynamic-programming/DyanmicProgrammi
 import Searchingpage from "./pages/searching/searchingPage";
 import RecursionPage from "./pages/Recursion/RecursionPage";
 import Treepage from "./pages/Tree/Treepage";
+import SlidingWindowPage from "./pages/sliding-window/SlidingWindowPage";
 function App() {
   return (
     <Router>
@@ -22,6 +23,7 @@ function App() {
         <Route path="/dynamic-programming" element={<DynamicProgrammingPage />} />
         <Route path="/recursion" element={<RecursionPage/>}/>
         <Route path="/tree" element={<Treepage />} />
+        <Route path="/sliding-window" element={<SlidingWindowPage/>}/>
       </Routes>
     </Router>
   );
