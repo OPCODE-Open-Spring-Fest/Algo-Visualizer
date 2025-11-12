@@ -80,6 +80,15 @@ const sections = [
     link: "/dynamic-programming",
     flag: false,
   },
+  {
+    title: "Tree Traversal",
+    description:
+      "Visualize inorder, preorder, and postorder tree traversals step by step.",
+    phase: "Phase 2",
+    img: "/Tree-Traversal.png",
+    link: "/tree",
+    flag: false,
+  },
 ];
 
 const Homepage = () => {
