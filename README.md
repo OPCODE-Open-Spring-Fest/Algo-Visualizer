@@ -162,7 +162,17 @@ Step through **state transitions** and **table updates** interactively to unders
 git clone https://github.com/<your-username>/Algo-Visualizer.git
 cd Algo-Visualizer
 ```
+## 🐳 Run with Docker
 
+Make sure **Docker** is installed and running on your system.  
+You don’t need to install **Node.js** or any dependencies manually — Docker handles everything.
+
+To start the development server, run:
+
+```bash
+docker compose up
+```
+Then open http://localhost:5173 in your browser to view the app.
 ### 2️⃣ Install Dependencies
 ```bash
 npm install
