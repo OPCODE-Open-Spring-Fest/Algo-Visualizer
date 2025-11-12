@@ -1,0 +1,10 @@
+services:
+  algo-visualizer:
+    build: .
+    container_name: algo-visualizer-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: ["npm", "run", "dev", "--", "--host"]
