@@ -44,6 +44,31 @@ Understand searching logic through dynamic comparisons.
 
 ---
 
+#### 🔹 Sliding Window Algorithms
+Demonstrate how the sliding window technique optimizes time complexity in problems involving subarrays and substrings.
+
+**Algorithms Included:**
+- Maximum Sum of Subarray of Size K  
+
+**Interactive Options:**
+- Adjust window size  
+- Control animation speed  
+- Real-time window movement visualization  
+- Dynamic highlighting of elements within the window  
+- Step-by-step explanation of window expansion and contraction  
+
+**Algorithm Overview:**
+The Sliding Window technique maintains a subset of elements using two pointers (start, end) that "slide" over the array or string to efficiently compute results without redundant recalculations.
+
+**General Approach:**
+1. Initialize start and end pointers
+2. Expand the window by moving end
+3. Process or evaluate current window state
+4. Shrink the window from start when constraints are violated
+5. Update the result as needed during traversal
+
+---
+
 #### 🔹 Pathfinding Algorithms (Graph / 2D Grid)
 Visualize how algorithms explore and find paths across a grid.
 
@@ -196,12 +221,19 @@ Algo-Visualizer/
 │   ├── algorithms/
 │   │   ├── sorting/
 │   │   ├── searching/
+│   │   ├── sliding-window/
 │   │   ├── pathfinding/
 │   │   ├── graph/
 │   ├── components/
+│   │   ├── sorting/
+│   │   ├── searching/
+│   │   ├── sliding-window/
+│   │   ├── pathfinding/
+│   │   ├── graph/
 │   ├── pages/
 │   │   ├── sorting/
 │   │   ├── searching/
+│   │   ├── sliding-window/
 │   │   ├── pathfinding/
 │   │   ├── graph/
 │   ├── utils/
