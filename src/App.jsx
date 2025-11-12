@@ -8,6 +8,7 @@ import DSPage from "./pages/dataStructure/datastructurePage.jsx"
 import DynamicProgrammingPage from "./pages/dynamic-programming/DyanmicProgrammingPage.jsx";
 import Searchingpage from "./pages/searching/searchingPage";
 import RecursionPage from "./pages/Recursion/RecursionPage";
+import Treepage from "./pages/Tree/Treepage";
 function App() {
   return (
     <Router>
@@ -20,6 +21,7 @@ function App() {
         <Route path="/graph" element={<GraphPage />} />
         <Route path="/dynamic-programming" element={<DynamicProgrammingPage />} />
         <Route path="/recursion" element={<RecursionPage/>}/>
+        <Route path="/tree" element={<Treepage />} />
       </Routes>
     </Router>
   );
