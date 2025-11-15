@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TreePine } from "lucide-react";
 import TreeTraversal from "./TreeTraversal";
+import BuildTreeFromPreorderInorder from "./BuildTreeFromPreorderInorder";
 
 export default function Treepage() {
   const [selectedAlgo, setSelectedAlgo] = useState("");
@@ -9,6 +10,8 @@ export default function Treepage() {
     switch (selectedAlgo) {
       case "tree-traversal":
         return <TreeTraversal />;
+      case "build-tree":
+        return <BuildTreeFromPreorderInorder />;
       default:
         return (
           <div className="flex flex-col items-center justify-center text-center p-6 mt-24">
@@ -46,6 +49,7 @@ export default function Treepage() {
         >
           <option value="">Select Algorithm</option>
           <option value="tree-traversal">Tree Traversal</option>
+          <option value="build-tree">Build Tree from Preorder & Inorder</option>
         </select>
         <button
           onClick={() => setSelectedAlgo("")}
