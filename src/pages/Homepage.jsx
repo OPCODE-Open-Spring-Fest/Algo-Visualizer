@@ -89,6 +89,15 @@ const sections = [
     link: "/tree",
     flag: false,
   },
+  {
+    title: "Greedy Algorithms",
+    description:
+      "Watch how greedy choices lead to optimal solutions in problems like Fractional Knapsack.",
+    phase: "Phase 2",
+    img: "",
+    link: "/greedy",
+    flag: false,
+  },
 ];
 
 const Homepage = () => {
