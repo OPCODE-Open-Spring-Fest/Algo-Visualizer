@@ -1,9 +1,9 @@
-// src/pages/SortingPage.jsx
 import React, { useState } from "react";
 import LinearSearch from "./linearSearch";
 import BinarySearch from "./BinarySearch";
+import RabinKarp from "./RabinKarp";  
 
-export default function SortingPage() {
+export default function SearchingPage() {  
   const [selectedAlgo, setSelectedAlgo] = useState("");
 
   const renderAlgorithm = () => {
@@ -12,7 +12,9 @@ export default function SortingPage() {
         return <LinearSearch />;
       case "BinarySearch":
         return <BinarySearch />;
-       
+      case "RabinKarp":  
+        return <RabinKarp />; 
+          
       default:
         return (
           <div className="text-gray-400 text-lg mt-20 text-center">
@@ -24,7 +26,6 @@ export default function SortingPage() {
 
   return (
     <div className="flex h-screen bg-black text-white">
-      {/* Left Sidebar */}
       <div className="w-64 bg-[#0f172a] p-6">
         <h2 className="text-xl font-bold mb-6 text-indigo-400">
           Searching Panel
@@ -37,8 +38,9 @@ export default function SortingPage() {
           className="w-full p-2 rounded bg-[#1e293b] text-white border border-gray-600 cursor-pointer"
         >
           <option value="">Select Algorithm</option>
-          <option value="LinearSearch">LinearSearch</option>
-          <option value="BinarySearch">BinarySearch</option>
+          <option value="LinearSearch">Linear Search</option>
+          <option value="BinarySearch">Binary Search</option>
+          <option value="RabinKarp">Rabin-Karp</option> 
         </select>
 
         <button
@@ -56,7 +58,6 @@ export default function SortingPage() {
         </a>
       </div>
 
-      {/* Right Visualization Area */}
       <div className="flex-1 flex justify-center items-center">
         {renderAlgorithm()}
       </div>
